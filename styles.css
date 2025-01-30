@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #ffffff;
+}
+
+h2 {
+    color: #333;
+    padding: 20px;
+    margin: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Center the icon and text vertically */
+    font-size: 2em; /* Adjust size */
+    font-family: 'Georgia', serif; /* Classic font */
+    color: #3e3e3e; /* Dark gray color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin: 10px 20px; /* Space around the logo */
+}
+
+/* Optional: Add a hover effect */
+.logo:hover {
+    color: #e74c3c; /* Change color on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background: rgb(238, 243, 247);
+}
+
+#header {
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center vertically */
+    padding: 10px 10px; /* Add padding */
+    background-color: #fffffff3; /* Background color for header */
+}
+
+nav {
+    margin-left: auto; /* Pushes the nav to the right */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Use Flexbox for horizontal layout */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: #646262; /* Link color */
+    font-weight: bold; /* Bold text */
+}
+
+/* Optional: Hover effect for nav links */
+nav a:hover {
+    color: #e74c3c; /* Change color on hover */
+}
+
+
+.hero {
+    height: 100vh;
+    padding: 30px;
+    background: url('https://images.pexels.com/photos/8215776/pexels-photo-8215776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+}
+
+.hero-text {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeInUp 1s forwards; /* Trigger the animation */
+    animation-delay: 0.5s; /* Delay for a smooth entrance */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* End visible */
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+.btn {
+    display: inline-block; /* Make the button inline-block for padding */
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #e74c3c; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.btn:hover {
+    background-color: #c0392b; /* Darker shade on hover */
+}
+#menu {
+    padding: 40px 20px;
+}
+#menu h2 {
+    text-align: center;
+}
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between items */
+    margin: 20px; /* Margin for the container */
+}
+
+
+.item {
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    text-align: center; /* Center the text */
+    background-color: #fff; /* White background */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.item img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.item h3 {
+    margin: 10px 0; /* Space above and below title */
+    color: #666;
+}
+
+.item p {
+    padding: 0 10px; /* Padding for description */
+    color: #666; /* Subtle color for description */
+}
+
+#reviews {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 40px 20px; /* Padding around the section */
+    text-align: center; /* Center text */
+    color: #000000;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column; /* Stack reviews vertically */
+    gap: 20px; /* Space between reviews */
+    max-width: 800px; /* Maximum width for content */
+    margin: auto; /* Center the container */
+}
+
+.review {
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding for each review */
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.rating {
+    color: #f39c12; /* Gold color for stars */
+}
+
+#special-offers {
+    padding: 40px 20px; /* Padding around the section */
+    text-align: center; /* Center text */
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+.offers-container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Space between offers */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.offer-item {
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding for each offer */
+    color: #333;
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 300px; /* Maximum width for each offer item */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.offer-item img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match item corners */
+}
+
+.offer-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+#about-us {
+    padding: 40px 20px; /* Padding around the section */
+    text-align: center; /* Center text */
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+#about-us h2 {
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+#about-us p {
+    max-width: 800px; /* Maximum width for paragraphs */
+    margin: auto; /* Center the text */
+    line-height: 1.6; /* Improved readability */
+    color: #333; /* Dark gray color for text */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#contact {
+    padding: 50px 20px;
+    background: #f9f9f9; /* Darker background for contact section */
+    color: #000000; /* Light text for readability */
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Responsive layout */
+}
+
+.info-item {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px; /* Minimum width for items */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #e74c3c; /* Highlighted border on focus */
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #e74c3c; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #c0392b; /* Darker shade on hover */
+}
